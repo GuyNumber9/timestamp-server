@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.sendFile("./public/index.html");
 });
 
-app.use(function(err, req, res, next) {
+app.use(function(req, res, next) {
   res.sendStatus(404);
 });
 
