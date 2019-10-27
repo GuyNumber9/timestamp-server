@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Timestamp Server</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <main>
+            <h1>Timestamp Server</h1>
+            <p>
+                A simple express-based timestamp server.
+            </p>
+            <h2>Usages:</h2>
+            <p>
+                To return the current time:
+                <pre>https://example.domain/api/timestamp</pre>
+                result: 
+<pre>
+{
+    unix	1572196758590,
+    utc	"Sun, 27 Oct 2019 17:19:18 GMT"
+}
+</pre>
+            </p>
+            <p>
+                To return the time at 123456789 miliseconds after the UNIX epoch:
+                <pre>https://example.domain/api/timestamp/123456789</pre>
+                result: 
+<pre>{
+    unix:	123456789,
+    utc:	"Fri, 02 Jan 1970 10:17:36 GMT"
+}</pre>
+            </p>
+            <p>
+                To return the miliseconds after the UNIX epoch on 2010-11-21:
+                <pre>https://example.domain/api/timestamp/2010-11-21</pre>
+                result: 
+<pre>{
+    unix:	1290297600000,
+    utc:	"Sun, 21 Nov 2010 00:00:00 GMT"
+}</pre>
+            </p>
+        </main>
+    </body>
+</html>

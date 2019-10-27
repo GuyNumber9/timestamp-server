@@ -3,6 +3,12 @@ let timestampRoutes = require('./routes/timestamp');
 
 let app = express();
 
+app.use(express.static('./public'));
+
 app.use('/api/timestamp/', timestampRoutes);
+
+app.get('/', (req, res) => {
+    res.sendFile('./public/index.html');
+});
 
 app.listen(3000);
